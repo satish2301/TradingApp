@@ -1,0 +1,17 @@
+:root{
+    --primary-color:#0F123F;
+    --dark-text:#FE981E;
+    --light-text:#67698E;
+    --text:#7C8DB5;
+    --heading:#000;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    font-size: 16px;
+    overflow-x: hidden;
+  }
