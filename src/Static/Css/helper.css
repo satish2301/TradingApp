@@ -1,29 +1,133 @@
-:root{
-    --primary-color:#0F123F;
-    --dark-text:#FE981E;
-    --light-text:#67698E;
-    --text:#7C8DB5;
-    --heading:#000;
-    --header:50px;
-    --footer:50px;
-  
+:root {
+  --primary-color: #0f123f;
+  --dark-bg: #fe981e;
+  --light-text: #67698e;
+  --text: #7c8db5;
+  --heading: #000;
+  --header: 9vh;
+  --footer: 50px;
 }
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-size: 16px;
+  overflow-x: hidden;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased; /* for better font rendering on WebKit browsers */
+  font-smooth: always;
+}
+
+@keyframes ani {
+  0% {
+    background-position: 0% 0;
   }
-  html,
-  body {
-    font-size: 16px;
-    overflow-x: hidden;
+  100% {
+    background-position: 100% 0;
   }
+}
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.roboto-thin-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.roboto-light-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.roboto-regular-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.roboto-medium-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.roboto-bold-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.roboto-black-italic {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
 
 /*--------------------------------------------------------------
 # Scrollbar
 --------------------------------------------------------------*/
+/* Firefox-specific scrollbar styles */
+.sat-sidebar {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.sat-sidebar::-webkit-scrollbar {
+  width: 3px !important;
+}
+
+.sat-sidebar::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+.sat-sidebar::-webkit-scrollbar-thumb {
+  border-radius: 4px !important;
+  background-color: transparent;
+}
+
 *::-webkit-scrollbar {
-  width: 3px;
+  width: 10px;
 }
 
 *::-webkit-scrollbar-track {
@@ -33,28 +137,60 @@
 
 *::-webkit-scrollbar-thumb {
   border-radius: 4px;
-
+  background-color: var(--dark-bg);
 }
 
+:where(.css-dev-only-do-not-override-p8b6i).ant-layout .ant-layout-sider {
+  position: absolute;
+  bottom: 0px;
+  top: 0px;
+  background: var(--primary-color);
 
-  :where(.css-dev-only-do-not-override-p8b6i).ant-layout .ant-layout-sider {
-    position: absolute;
-    bottom: 0px;
-    top: 0px;
-    background: var(--primary-color);
-    
-    border-top-right-radius: 20px;
-    
+  border-top-right-radius: 20px;
 }
-:where(.css-dev-only-do-not-override-p8b6i).ant-menu-dark, :where(.css-dev-only-do-not-override-p8b6i).ant-menu-dark>.ant-menu {
+:where(.css-dev-only-do-not-override-p8b6i).ant-menu-dark,
+:where(.css-dev-only-do-not-override-p8b6i).ant-menu-dark > .ant-menu {
   color: rgba(255, 255, 255, 0.65);
   background: var(--primary-color);
 }
-:where(.css-dev-only-do-not-override-p8b6i).ant-menu-dark.ant-menu-inline .ant-menu-sub.ant-menu-inline, :where(.css-dev-only-do-not-override-p8b6i).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-sub.ant-menu-inline {
+:where(.css-dev-only-do-not-override-p8b6i).ant-menu-dark.ant-menu-inline
+  .ant-menu-sub.ant-menu-inline,
+:where(.css-dev-only-do-not-override-p8b6i).ant-menu-dark
+  > .ant-menu.ant-menu-inline
+  .ant-menu-sub.ant-menu-inline {
   color: rgba(255, 255, 255, 0.65);
   background: var(--primary-color);
 }
-:where(.css-dev-only-do-not-override-p8b6i).ant-menu-dark .ant-menu-item-selected, :where(.css-dev-only-do-not-override-p8b6i).ant-menu-dark>.ant-menu .ant-menu-item-selected{
-  color: #fff!important;
-  background-color: var(--dark-text)!important;
+:where(.css-dev-only-do-not-override-p8b6i).ant-menu-dark
+  .ant-menu-item-selected,
+:where(.css-dev-only-do-not-override-p8b6i).ant-menu-dark
+  > .ant-menu
+  .ant-menu-item-selected {
+  color: #fff !important;
+  background-color: var(--dark-bg) !important;
+}
+
+:where(.css-dev-only-do-not-override-p8b6i).ant-badge .ant-badge-count {
+  position: absolute;
+  top: -4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+:where(.css-dev-only-do-not-override-p8b6i).ant-badge .ant-badge-count {
+  display: inline-flex;
+  justify-content: center;
+  z-index: auto;
+  min-width: 14px;
+  height: 14px;
+  color: #ffffff;
+  font-weight: normal;
+  font-size: 12px;
+
+  white-space: nowrap;
+  text-align: center;
+  background: #ff4d4f;
+  border-radius: 10px;
+  box-shadow: 0 0 0 1px #ffffff;
+  transition: background 0.2s;
 }

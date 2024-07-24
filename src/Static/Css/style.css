@@ -1,81 +1,200 @@
-
-
-  .dmt-header {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-    background-color: #fff;
-    position: fixed;
-    top: 0;
-    right: 12px;
-    left: 0px;
-    z-index: 99;
-    margin-left: 210px;
-  }
-  .header-bottom h3{
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--heading);
-  }
-  
+.dmt-header {
+  height: var(--header);
+  display: flex;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  right: 10px;
+  left: 0px;
+  z-index: 99;
+  margin-left: 210px;
+  transition: all 0.5s ease;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.header-bottom h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--heading);
+}
+.header .notification {
+  position: relative;
+}
+.header .notification {
+  position: absolute;
+  top: 10px;
+  right: 0px;
+  width: 100px;
+  height: 20px;
+  background-color: #333;
+}
 /*--------------------------------------------------------------
 # Sidebar
 --------------------------------------------------------------*/
 .sat-sidebar {
-    background: var(--primary-color);
-   
-    box-shadow: 0 0.5rem 1rem #00000026;
-   
-    overflow-x: auto;
-    --size: 8px;
-    position: fixed !important;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    z-index: 999;
-    
+  background: var(--primary-color);
 
-  }
-  .logo{
-    padding: 10px 20px;
-    
-    display: flex;
-    justify-content: start;
-    align-items: center;
-  }
-  .menu-bar-head{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
-  }
+  box-shadow: 0 0.5rem 1rem #00000026;
 
-  /*--------------------------------------------------------------
+  overflow-x: auto;
+  --size: 8px;
+  position: fixed !important;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  z-index: 999;
+}
+.logo {
+  padding: 10px 20px;
+
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.menu-bar-head {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 80vh;
+}
+
+/*--------------------------------------------------------------
 # Main Wrapper
 --------------------------------------------------------------*/
 .dmt-mainWrp {
-    min-height: calc(100vh - (var(--header)));
-    /* padding: 20px 16px; */
-    margin-left: 210px;
-    margin-right: 10px;
-    margin-top: 70px;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-    background-color: #fff;
-    padding: 20px;
-  }
+  min-height: 80vh;
+  margin-left: 210px;
+  margin-right: 10px;
+  margin-top: 10vh;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  background-color: #fff;
+  padding: 10px;
+  transition: all 0.5s ease;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
 
+/*--------------------------------------------------------------
+# Dashboard
+--------------------------------------------------------------*/
+.dashboard .enq-head {
+  z-index: 22;
+  position: relative;
+}
+.dashboard .enq-head .icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0px 2px 10px 0px #fff;
+  z-index: 22;
 
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dashboard .enq-content span {
+  font-size: 12px;
+  margin-left: 18px;
+}
+.dashboard .enq-content {
+  position: relative;
+  z-index: 22;
+}
+.dashboard .enq-content svg {
+  position: absolute;
+  top: 20px;
+  left: -2px;
+  z-index: 22;
+}
+
+.dashboard .enq-card {
+  border-radius: 10px;
+
+  padding: 6px;
+  overflow: hidden;
+  position: relative;
+  z-index: 22;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  outline: none;
+}
+.dashboard .enq-card .enq-bg {
+  height: 145px;
+  width: 145px;
+  /* background-color: #1e2253; */
+  z-index: 1;
+  position: absolute;
+  top: -75px;
+  right: -75px;
+
+  border-radius: 50%;
+
+  -webkit-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.dashboard .enq-card:hover .enq-bg {
+  -webkit-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+}
+.dashboard .enq-card:hover {
+  color: #fff !important;
+}
+.dashboard .enq-card:hover .dashboard .enq-content span {
+  color: #fff !important;
+}
+
+/*--------------------------------------------------------------
+# BrokerageChart
+--------------------------------------------------------------*/
+.filterSection {
+  width: 100%;
+  background-color: rgba(244, 244, 244, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.revenuchart {
+  width: 300px;
+  margin: auto;
+  text-align: center;
+}
+.cal-notifi {
+  position: relative;
+}
+.cal-value {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  right: 0px;
+  top: 14px;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--dark-bg);
+  color: #000;
+  font-weight: 600;
+}
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-footer.dmt-footer {
-    background-color: rgba(0, 0, 0, 0.08);
-    min-height: var(--footer);
-    display: flex;
-    align-items: center;
-    color: #333;
-    margin-left: 200px;
-  }
-  
+footer.sat-footer {
+  background-color: rgba(0, 0, 0, 0.08);
+  min-height: var(--footer);
+  display: flex;
+  align-items: center;
+  color: #333;
+  margin-left: 200px;
+  transition: all 0.5s ease;
+}

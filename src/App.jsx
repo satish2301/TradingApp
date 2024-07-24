@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import {
   MenuFoldOutlined,
@@ -6,16 +6,16 @@ import {
   UploadOutlined,
   UserOutlined,
   VideoCameraOutlined,
-} from '@ant-design/icons';
+} from "@ant-design/icons";
 import WebRoutes from "./routes";
-import { Button, Layout, Menu, message, theme } from 'antd';
-import "./App.css"
-import Sidebar from './Components/Common/Sidebar';
+import { Button, Layout, Menu, message, theme } from "antd";
+import "./App.css";
+import Sidebar from "./Components/Common/Sidebar";
 
-import Footer from './Components/Common/Footer';
-import BaseComponents from './Components/Common/BaseComponents';
-import Work from './Components/Services/Work';
-import Dashboard from './Components/Common/Dashboard';
+import Footer from "./Components/Common/Footer";
+import BaseComponents from "./Components/Common/BaseComponents";
+import Work from "./Components/Services/Work";
+import Dashboard from "./Components/Common/Dashboard";
 const { Content } = Layout;
 const App = () => {
   const [messageApi, contextHolder] = message.useMessage();
@@ -45,21 +45,18 @@ const App = () => {
   };
   return (
     <>
-       {contextHolder}
+      {contextHolder}
       {/* <ScrollToTop>
         <Suspense fallback={<Loading />}> */}
-          <Routes>
-            {/* <Route path={WebRoutes.LOGIN} element={<Login />} /> */}
-            
-            <Route
-              path={WebRoutes.DASHBOARD}
-              element={<BaseComponents/>}
-            >
-            <Route path={WebRoutes.DASHBOARD} element={<Dashboard />} />
-              <Route path={WebRoutes.WORK} element={<Work />} />
-            </Route>
-          </Routes>
-        {/* </Suspense>
+      <Routes>
+        {/* <Route path={WebRoutes.LOGIN} element={<Login />} /> */}
+
+        <Route path={WebRoutes.DASHBOARD} element={<BaseComponents />}>
+          <Route path={WebRoutes.DASHBOARD} element={<Dashboard />} />
+          <Route path={WebRoutes.WORK} element={<Work />} />
+        </Route>
+      </Routes>
+      {/* </Suspense>
       </ScrollToTop> */}
     </>
   );
