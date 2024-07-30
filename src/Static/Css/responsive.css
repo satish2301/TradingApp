@@ -1,6 +1,11 @@
 /* Up to 480px */
 @media only screen and (max-width: 480px) {
   /* CSS rules for mobile phones */
+  .revenuchart {
+    width: 200px;
+    margin: auto;
+    text-align: center;
+  }
 }
 
 /* Up to 481px to 768px */
@@ -15,6 +20,11 @@
   .cal-value {
     right: -11px;
     top: -13px;
+  }
+  .revenuchart {
+    width: 300px;
+    margin: auto;
+    text-align: center;
   }
 }
 

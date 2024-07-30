@@ -7,7 +7,7 @@
   background-color: #fff;
   position: fixed;
   top: 0;
-  right: 10px;
+  right: 11px;
   left: 0px;
   z-index: 99;
   margin-left: 210px;
@@ -81,6 +81,19 @@
 /*--------------------------------------------------------------
 # Dashboard
 --------------------------------------------------------------*/
+.dashboard {
+  transform: translatY(100%);
+  transition: all 0.5s;
+  animation: slidingEffect 0.5s ease linear;
+}
+@keyframes slidingEffect {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
 .dashboard .enq-head {
   z-index: 22;
   position: relative;
@@ -185,6 +198,27 @@
   background: var(--dark-bg);
   color: #000;
   font-weight: 600;
+}
+.order-list thead {
+  width: 100%;
+}
+
+.order-list td,
+th {
+  padding: 15px;
+}
+.light {
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
+  margin-top: 6px;
+  border-radius: 50%;
+}
+.pagination {
+  width: 100%;
+  background-color: rgba(244, 244, 244, 0.5);
+  padding: 10px;
+  margin: 10px 0px;
 }
 /*--------------------------------------------------------------
 # Footer
