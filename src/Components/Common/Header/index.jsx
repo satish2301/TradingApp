@@ -1,17 +1,24 @@
 import { Avatar, Badge, Button, Dropdown } from "antd";
 import React, { useEffect, useState } from "react";
 
-import {
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
-  UploadOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-} from "@ant-design/icons";
+import { MenuFoldOutlined } from "@ant-design/icons";
 import { BiBell, BiSearch } from "react-icons/bi";
 import { MdLogout } from "react-icons/md";
 import Male from "../../../Static/Img/user-M.svg";
+import { useLocation } from "react-router-dom";
 const Header = ({ isCollapse, setIsCollapse }) => {
+  const location = useLocation();
+
+  const [titleName, setTitleName] = useState("DashBoard");
+  useEffect(() => {
+    if (location.pathname == "/") {
+      setTitleName("Overview");
+    } else if (location.pathname == "/work") {
+      setTitleName("Work");
+    } else if (location.pathname == "/scheCalendar") {
+      setTitleName("Schedule");
+    }
+  }, [location]);
   const items = [
     {
       key: "Profile",
@@ -90,7 +97,7 @@ const Header = ({ isCollapse, setIsCollapse }) => {
           <h3>Welcome Back, Rishabh</h3>
           <h3>In focus: product, data/sales pitch Resources</h3>
         </div>
-        <div className="flex items-center text-2xl ml-4">Dashboard</div>
+        <div className="flex items-center text-2xl ml-4">{titleName}</div>
         <div className="right-sec mr-4 flex items-end ">
           <ul className="flex gap-10 items-end">
             <li className="hidden sm:block">

@@ -16,6 +16,7 @@ import Footer from "./Components/Common/Footer";
 import BaseComponents from "./Components/Common/BaseComponents";
 import Work from "./Components/Services/Work";
 import Dashboard from "./Components/Common/Dashboard";
+import ScheduleWork from "./Components/Services/ScheduleCalandar";
 const { Content } = Layout;
 const App = () => {
   const [messageApi, contextHolder] = message.useMessage();
@@ -54,6 +55,7 @@ const App = () => {
         <Route path={WebRoutes.DASHBOARD} element={<BaseComponents />}>
           <Route path={WebRoutes.DASHBOARD} element={<Dashboard />} />
           <Route path={WebRoutes.WORK} element={<Work />} />
+          <Route path={WebRoutes.SCHEDULE_CAL} element={<ScheduleWork />} />
         </Route>
       </Routes>
       {/* </Suspense>

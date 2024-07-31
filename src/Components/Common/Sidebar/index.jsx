@@ -80,6 +80,9 @@ const Sidebar = ({ setIsCollapse, isCollapse }) => {
       ),
       icon: <MdCalendarViewMonth />,
       key: "calendar/schedule",
+      onClick: () => {
+        navigate("/scheCalendar");
+      },
     },
     {
       label: "Setting",

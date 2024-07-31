@@ -59,16 +59,7 @@ const RevenuChart = () => {
       <h2 className="text-2xl font-bold">Revenue breakup</h2>
       <div className="relative">
         <Doughnut data={data} options={options} />
-        <div
-          style={{
-            position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%)",
-            fontSize: "1.5rem",
-            fontWeight: "bold",
-          }}
-        >
+        <div className="totalRevenue-text">
           {new Intl.NumberFormat("en-IN", {
             style: "currency",
             currency: "INR",

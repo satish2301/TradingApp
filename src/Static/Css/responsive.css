@@ -6,6 +6,14 @@
     margin: auto;
     text-align: center;
   }
+  .revenuchart .totalRevenue-text {
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: -3.5rem;
+    font-weight: bold;
+  }
 }
 
 /* Up to 481px to 768px */
@@ -26,6 +34,14 @@
     margin: auto;
     text-align: center;
   }
+  .revenuchart .totalRevenue-text {
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: -3.5rem;
+    font-weight: bold;
+  }
 }
 
 /*Up to 769px to 1024px */
@@ -45,9 +61,25 @@
 /* Portrait Mode */
 @media only screen and (orientation: portrait) {
   /* CSS rules for portrait mode */
+  .revenuchart .totalRevenue-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: -3.5rem;
+    font-weight: bold;
+  }
 }
 
 /* Landscape Mode */
 @media only screen and (orientation: landscape) {
   /* CSS rules for landscape mode */
+  .revenuchart .totalRevenue-text {
+    position: absolute;
+    top: 45%;
+    left: 51%;
+    transform: translate(-50%, -50%);
+    font-size: -3.5rem;
+    font-weight: bold;
+  }
 }

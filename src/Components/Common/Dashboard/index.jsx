@@ -2,13 +2,12 @@ import { Button, Card, Col, Pagination, Row, Select } from "antd";
 import EnquiryCard from "../EnquiryCard/EnquiryCard";
 import BrokageChart from "../BrokageChart/BrokageChart";
 import RevenuChart from "../RevenuChart/RevenuChart";
-import { MdBusAlert } from "react-icons/md";
-import arrowIcon from "../../../Static/Img/shape.png";
+
 import { BiEdit } from "react-icons/bi";
 
 const Dashboard = () => {
   return (
-    <div className="dashboard px-0">
+    <div className="dashboard px-0 bottomToTopAni">
       <EnquiryCard />
 
       <Row
@@ -22,7 +21,7 @@ const Dashboard = () => {
           xs={{ span: 24, order: 2 }}
           className="!px-0"
         >
-          <Card>
+          <Card className="">
             <BrokageChart />
           </Card>
         </Col>
@@ -41,11 +40,11 @@ const Dashboard = () => {
       <Row className="my-2">
         <Col span={24}>
           <Card className="bg-white">
-            <div className="order-head flex justify-between">
+            <div className="order-head bg-gray-100 p-2 rounded shadow flex justify-between">
               <h2 className="text-lg font-bold">Order List</h2>
               <div>
                 <Select
-                  className=""
+                  className="bg-white"
                   defaultValue="Monthly"
                   style={{ width: 120 }}
                   options={[

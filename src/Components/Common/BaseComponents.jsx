@@ -14,7 +14,7 @@ const BaseComponents = () => {
       <Layout className="bg-white">
         <Header isCollapse={isCollapse} setIsCollapse={setIsCollapse} />
         <Content
-          className="dmt-mainWrp"
+          className="sat-mainWrp"
           style={{ marginLeft: isCollapse ? "" : "86px" }}
         >
           <Outlet />

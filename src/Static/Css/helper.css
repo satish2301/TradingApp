@@ -186,7 +186,14 @@ body {
   color: #fff !important;
   background-color: var(--dark-bg) !important;
 }
-
+:where(.css-dev-only-do-not-override-1pg9a38).ant-menu-dark
+  .ant-menu-item-selected,
+:where(.css-dev-only-do-not-override-1pg9a38).ant-menu-dark
+  > .ant-menu
+  .ant-menu-item-selected {
+  color: #fff !important;
+  background-color: var(--dark-bg) !important;
+}
 :where(.css-dev-only-do-not-override-p8b6i).ant-badge .ant-badge-count {
   position: absolute;
   top: -4px;
@@ -210,4 +217,17 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 0 1px #ffffff;
   transition: background 0.2s;
+}
+
+.bottomToTopAni {
+  animation: bottomToTop 0.7s ease;
+  transform: translateY(0px);
+}
+@keyframes bottomToTop {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
